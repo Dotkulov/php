@@ -27,31 +27,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message']) && $_SESSI
     }
 }
 
-function getGrandmaResponse($input, &$countPoka, &$active) {
-    $upperInput = mb_strtoupper($input);
+// Простая функция для преобразования русских букв в верхний регистр
+function ruStrtoupper($string) {
+    $lower = [
+        'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+    ];
+    $upper = [
+        'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
+    ];
     
-    if ($upperInput === 'ПОКА!') {
+    return str_replace($lower, $upper, strtoupper($string));
+}
+
+function getGrandmaResponse($input, &$countPoka, &$active) {
+    // Приводим к верхнему регистру с поддержкой русского языка
+    $upperInput = ruStrtoupper($input);
+    
+    // Отладочная информация (можно удалить после проверки)
+    error_log("Входное сообщение: " . $input);
+    error_log("В верхнем регистре: " . $upperInput);
+    error_log("Текущий счетчик: " . $countPoka);
+    
+    if ($upperInput === 'ПОКА!' || $upperInput === 'ПОКА' || $upperInput === 'ПОКА!!') {
         $countPoka++;
+        error_log("Счетчик увеличен: " . $countPoka);
         
         if ($countPoka >= 3) {
             $active = false;
+            error_log("Диалог завершен!");
             return "ДО СВИДАНИЯ, МИЛЫЙ! ЗАХОДИ ЕЩЁ!";
         } else {
             $year = rand(1930, 1950);
             return "НЕТ, НИ РАЗУ С $year ГОДА!";
         }
+    } else {
+        // Если сообщение не "Пока!", сбрасываем счетчик
+        $countPoka = 0;
     }
     
-    $countPoka = 0;
-    
-    if (strpos($upperInput, 'ПОКА!') !== false) {
-        $pokaCount = substr_count($upperInput, 'ПОКА!');
-        if ($pokaCount > 1) {
-            $year = rand(1930, 1950);
-            return "ХИТРЫЙ КАКОЙ! НЕТ, НИ РАЗУ С $year ГОДА!";
-        }
-    }
-    
+    // Проверяем последний символ
     if (substr($input, -1) === '!') {
         $year = rand(1930, 1950);
         return "НЕТ, НИ РАЗУ С $year ГОДА!";
@@ -376,7 +390,6 @@ if (isset($_POST['reset'])) {
                 <li><strong>Тихо</strong> — без !, бабушка не слышит</li>
                 <li><strong>Громко</strong> — с !, бабушка отвечает годом</li>
                 <li><strong>Пока!</strong> — 3 раза подряд для прощания</li>
-                <li><strong>Хитрость</strong> — несколько "пока!" в одной строке не работают</li>
             </ul>
         </div>
     </div>
