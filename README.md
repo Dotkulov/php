@@ -6,6 +6,9 @@
 - [arrays](https://github.com/Dotkulov/php/blob/main/Введение/examples/04_arrays.php)
 - [task_01](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_01.php)
 - [task_02](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_02.php)
+- [task_03](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_03.php)
+- [task_04](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_04.php)
+- [task_05](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_05.php)
 - [Контрольная точка №1](https://github.com/Dotkulov/php/blob/main/KT1/)
 - [Контрольная точка №2](https://github.com/Dotkulov/php/blob/main/KT2/)   
 
@@ -43,9 +46,14 @@
 ## Контрольная точка №2
 
 **Материалы:**  
-| Код | скриншот |
-|-----|----------|
-| [index.php](https://github.com/Dotkulov/php/blob/main/KT2/index.php)     | [image_01.png](https://github.com/Dotkulov/php/blob/main/KT2/image1.png) |
-| [captcha.php](https://github.com/Dotkulov/php/blob/main/KT2/captcha.php) | [image_02.png](https://github.com/Dotkulov/php/blob/main/KT2/image2.png) |
+- [Код — index.php](https://github.com/Dotkulov/php/blob/main/KT2/index.php)  
+- [Скриншот — image.png](https://github.com/Dotkulov/php/blob/main/KT2/image.png)
+
+**Материалы:**  
+| Задание | Код | скриншот |
+|---------|-----|----------|
+| Задание №3 | [task_03.php](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_03.php) | [image_task_03.png](https://github.com/Dotkulov/php/blob/main/Введение/tasks/image_task_03.png) |
+| Задание №4 | [task_04.php](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_04.php) | [image_task_04.png](https://github.com/Dotkulov/php/blob/main/Введение/tasks/image_task_04.png) |
+| Задание №5 | [task_05.php](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_05.php) | [image_task_05.png](https://github.com/Dotkulov/php/blob/main/Введение/tasks/image_task_05.png) |
 
 ---
