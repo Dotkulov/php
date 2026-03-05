@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message']) && $_SESSI
     }
 }
 
-// Простая функция для преобразования русских букв в верхний регистр
 function ruStrtoupper($string) {
     $lower = [
         'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'
@@ -40,10 +39,9 @@ function ruStrtoupper($string) {
 }
 
 function getGrandmaResponse($input, &$countPoka, &$active) {
-    // Приводим к верхнему регистру с поддержкой русского языка
+    
     $upperInput = ruStrtoupper($input);
     
-    // Отладочная информация (можно удалить после проверки)
     error_log("Входное сообщение: " . $input);
     error_log("В верхнем регистре: " . $upperInput);
     error_log("Текущий счетчик: " . $countPoka);
@@ -61,11 +59,8 @@ function getGrandmaResponse($input, &$countPoka, &$active) {
             return "НЕТ, НИ РАЗУ С $year ГОДА!";
         }
     } else {
-        // Если сообщение не "Пока!", сбрасываем счетчик
         $countPoka = 0;
     }
-    
-    // Проверяем последний символ
     if (substr($input, -1) === '!') {
         $year = rand(1930, 1950);
         return "НЕТ, НИ РАЗУ С $year ГОДА!";
