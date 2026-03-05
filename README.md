@@ -24,6 +24,12 @@
 
 ---
 
+## Контрольная точка №1
+
+**Материалы:**  
+- [Код — index.php](https://github.com/Dotkulov/php/blob/main/KT1/index.php)  
+- [Скриншот — image.png](https://github.com/Dotkulov/php/blob/main/KT1/KT1.png)
+
 ## Практические задания
 
 **Материалы:**  
@@ -31,14 +37,6 @@
 |---------|-----|----------|
 | Задание №1 | [task_01.php](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_01.php) | [image_task_01.png](https://github.com/Dotkulov/php/blob/main/Введение/tasks/image_task_01.png) |
 | Задание №2 | [task_02.php](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_02.php) | [image_task_02.png](https://github.com/Dotkulov/php/blob/main/Введение/tasks/image_task_02.png) |
-
----
-
-## Контрольная точка №1
-
-**Материалы:**  
-- [Код — index.php](https://github.com/Dotkulov/php/blob/main/KT1/index.php)  
-- [Скриншот — image.png](https://github.com/Dotkulov/php/blob/main/KT1/KT1.png)
 
 ---
 
