@@ -59,7 +59,8 @@
 | Задание №7 | [task_07.php](https://github.com/Dotkulov/php/blob/main/Введение/tasks/task_07.php) | [image_task_07.png](https://github.com/Dotkulov/php/blob/main/Введение/tasks/image_task_07.png) |
 
 **Каптча:**  
-- [Код — index.php](https://github.com/Dotkulov/php/blob/main/KT2/index.php)  
+- [Код — index.php](https://github.com/Dotkulov/php/blob/main/KT2/index.php)
+- [Код — captcha.php](https://github.com/Dotkulov/php/blob/main/KT2/captcha.php)    
 - [Скриншот — image.png](https://github.com/Dotkulov/php/blob/main/KT2/image.png)
 
 ---
